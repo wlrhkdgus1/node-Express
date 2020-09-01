@@ -1,0 +1,64 @@
+mysql 실행 및 사용법 https://opentutorials.org/course/3161/19532
+
+스키마 = 서로 연관된 데이터들을 그룹핑해준다.
+스키마가 많아지면 어딘가에 저장되어야될텐데 그것을
+데이터베이스 서버라고 합니다.
+
+ SHOW DATABASES; = 데이타베이스 보는법.
+C:\Bitnami\wampstack-7.4.9-0\mysql\bin = sql 경로
+환경변수에 설정했다면
+cmd창 열고 mysql -u root -p 입력후
+비밀번호치면 들어가집니다. mysql>
+USE opentutorials;
+
+CREATE TABLE 할때 볼만한 사이트 https://nittaku.tistory.com/384
+
+CREATE TABLE topic(
+      id INT(11) NOT NULL AUTO_INCREMENT,
+      title VARCHAR(100) NOT NULL,
+      description TEXT NULL,
+      created DATETIME NOT NULL,
+      author VARCHAR(15) NULL,
+      profile VARCHAR(200) NULL,
+      PRIMARY KEY(id)
+      );
+
+///////////////////////////////////////////////////////
+DESC topic; = 숫자 거꾸로 출력 
+
+INSERT INTO topic (title,description,created,author,profile) VALUES('MySQL','MySQL is ...',NOW(),'amarans','developer');
+
+테이블 전체 내용 보기
+SELECT * FROM topic; 
+
+원하는것만 출력하는 방법:
+id와 title만 보려면 SELECT id,title FROM topic;
+ author이 amarans인 사람의 id와 title만 보고싶으면.
+ SELECT id,title FROM topic WHERE author='amarans';
+LIMIT 2와 DESC를 통해 ID가 큰 숫자부터 2개 출력함.
+SELECT id,title FROM topic WHERE author='amarans'ORDER BY id DESC LIMIT 2;
+
+UPDATE
+UPDATE topic SET description='Oracle is...', title='Oracle' WHERE id=2;
+topic을 셋시킨다 description 의 내용과 title의 이름을 누구꺼를 ? id가 2번인
+
+DELETE
+DELETE FROM topic WHERE id = 5;
+
+JOIN 사용법
+SELECT * FROM topic LEFT JOIN author ON topic.author_id = author.id;
+id 를 통하여 전체화면 조인
+
+SELECT topic.id,title,description,created,name,profile FROM topic LEFT JOIN author ON topic.author_id = author.id;
+SELECT * 이 아닌 원하는것만 출력하여 조인
+
+SELECT topic.id AS topic_id,title,description,created,name,profile FROM topic LEFT JOIN author ON topic.author_id = author.id;
+topic의 id의 이름을 topic_id로 바꾸어 출력
+
+
+*mysql workbench 설치및 사용법 참고.*
+https://www.inflearn.com/course/database-2-mysql-%EA%B0%95%EC%A2%8C/lecture/10310?tab=curriculum
+
+zip으로 압축하여 만들기
+var compression = ('compression');
+app.use(compression());      // 현재 오류뜸 다시봐야됨..
