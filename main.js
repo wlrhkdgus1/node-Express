@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var sanitizeHtml = require('sanitize-html');
 var template = require('./lib/template.js');
 
-
-
+          //public이라는 디렉토리 아래있는 파일이나 디렉토리를 url을 통해 접근가능하게 해줌
+app.use(express.static('public'));//정적인파일을 서비스하기위해 쓰는 코드
 app.use(bodyParser.urlencoded({ extended: false}));
 app.get('*',function(request, response, next){
 fs.readdir('./data',function(error, filelist){
@@ -24,32 +24,39 @@ app.get('/', function(request, response){
     var description = 'Hello, Node.js';
     var list = template.list(request.list);
     var html = template.HTML(title, list,
-      `<h2>${title}</h2>${description}`,
+      `<h2>${title}</h2>${description}
+      <img src="/images/hello.jpg" style="width:300px; 
+      display:block; margin-top:10px;">
+      `,
       `<a href="/create">create</a>`
     );
     response.send(html);
   });
 
 
-app.get('/page/:pageId', function(request, response){
+app.get('/page/:pageId', function(request, response, next){
     var filteredId = path.parse(request.params.pageId).base;
     fs.readFile(`data/${filteredId}`, 'utf8', function(err, description){
-      var title = request.params.pageId;
-      var sanitizedTitle = sanitizeHtml(title);
-      var sanitizedDescription = sanitizeHtml(description, {
-        allowedTags:['h1']
-      });
-      var list = template.list(request.list);
-      var html = template.HTML(sanitizedTitle, list,
-        `<h2>${sanitizedTitle}</h2>${sanitizedDescription}`,
-        ` <a href="/create">create</a>
-          <a href="/update/${sanitizedTitle}">update</a>
-          <form action="/delete_process" method="post">
-            <input type="hidden" name="id" value="${sanitizedTitle}">
-            <input type="submit" value="delete">
-          </form>`
-      );
-      response.send(html);
+      if(err){
+        next(err);
+      } else {
+        var title = request.params.pageId;
+        var sanitizedTitle = sanitizeHtml(title);
+        var sanitizedDescription = sanitizeHtml(description, {
+          allowedTags:['h1']
+        });
+        var list = template.list(request.list);
+        var html = template.HTML(sanitizedTitle, list,
+          `<h2>${sanitizedTitle}</h2>${sanitizedDescription}`,
+          ` <a href="/create">create</a>
+            <a href="/update/${sanitizedTitle}">update</a>
+            <form action="/delete_process" method="post">
+              <input type="hidden" name="id" value="${sanitizedTitle}">
+              <input type="submit" value="delete">
+            </form>`
+        );
+        response.send(html);
+      }
     });
   });
 
@@ -127,6 +134,14 @@ app.post('/delete_process', function(request,response){
           });
       });
 
+app.use(function (req, res, next) {
+  res.status(404).send("Sorry can't find that!")
+});
+
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+});
 
 app.listen(3000, () => {
   console.log(`Example app listening at http://localhost:3000`)
