@@ -62,3 +62,7 @@ https://www.inflearn.com/course/database-2-mysql-%EA%B0%95%EC%A2%8C/lecture/1031
 zip으로 압축하여 만들기
 var compression = ('compression');
 app.use(compression());      // 현재 오류뜸 다시봐야됨..
+
+node Express
+https://expressjs.com/ - > getting started - >hello world
+부터 단계별로 나와있음.
