@@ -66,3 +66,6 @@ app.use(compression());      // 현재 오류뜸 다시봐야됨..
 node Express
 https://expressjs.com/ - > getting started - >hello world
 부터 단계별로 나와있음.
+
+Express 미들웨어
+2020년 초 기준 express 사용시 bodyparser를 따로 요청하지않아도 request.body 호출이 가능합니다.
