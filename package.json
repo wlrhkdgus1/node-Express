@@ -25,6 +25,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "parser": "^0.1.4",
-    "sanitize-html": "^1.18.2"
+    "sanitize-html": "^1.18.2",
+    "session-file-store": "^1.4.0"
   }
 }
