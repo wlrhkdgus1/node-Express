@@ -2,8 +2,7 @@ const express = require('express')
 const app = express()
 var fs = require('fs');
 var bodyParser = require('body-parser');
-var indexRouter = require('./routes/index');
-var topicRouter = require('./routes/topic');
+
 
 
 //public이라는 디렉토리 아래있는 파일이나 디렉토리를 url을 통해 접근가능하게 해줌
@@ -15,9 +14,17 @@ fs.readdir('./data',function(error, filelist){
     next();
   });
 });
+
+
+var indexRouter = require('./routes/index');
+var topicRouter = require('./routes/topic');
+var authRouter = require('./routes/auth');
+
+
 // /topic로 시작하는 주소들에게 topicRouter 라하는 이름의 미들웨어를 적용하겟다.
 app.use('/', indexRouter);
 app.use('/topic',topicRouter);
+app.use('/auth',authRouter);
 
 //route, routing
 /*app.get('/', (req, res) => { res.send('Hello World!')})*/
