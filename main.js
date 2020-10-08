@@ -18,7 +18,7 @@ app.use(session({
   secret: 'asadlfkj!@#!@#dfgasdg',
   resave: false,
   saveUninitialized: true,
-  //store: new FileStore()
+  store: new FileStore()
 }))
 app.use(flash());
 
