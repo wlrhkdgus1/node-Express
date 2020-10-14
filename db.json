@@ -1,126 +1,19 @@
 {
   "users": [
     {
-      "id": "anzXukhCt",
-      "email": "amarans@gmail.com",
-      "password": "111111",
-      "displayName": "amarans"
-    },
-    {
-      "id": "xt06SVT9F",
-      "email": "111",
-      "password": "123",
-      "displayName": "111"
-    },
-    {
-      "id": "TMNrEeEYW",
-      "email": "amarnas@gmail.com",
-      "password": "111111",
-      "displayName": "amarans"
-    },
-    {
-      "id": "iH8Ewka0Z",
-      "email": "1qqqq",
-      "password": "q",
-      "displayName": "q"
-    },
-    {
-      "id": "DE5m85AyM",
-      "email": "amarans@gmail.com",
-      "password": "111111",
-      "displayName": "amarans"
-    },
-    {
-      "id": "ixIBMcHxP",
-      "email": "123",
-      "password": "111",
-      "displayName": "123"
-    },
-    {
-      "id": "Zm_J6vMOb",
-      "email": "sorialgi@gmail.com",
-      "password": "$2b$10$YQewcnEdQgXXkTSyPAtkKOXlAFvqv8AedmFR5oOPIvGcadpM5S9gq",
-      "displayName": "sorialgi"
-    },
-    {
-      "id": "4SrWNBkDx",
-      "email": "sorialgi@gmail.com",
-      "password": "$2b$10$4lV.2jTheAi2CiQrgVE76OlYrmJRUUqk27C99TBmFSvictFijxcsi",
-      "displayName": "sorialgi"
-    },
-    {
-      "id": "B__wddf7Z",
-      "email": "amarans@gmail.com",
-      "password": "$2b$10$yXPzUsyRTon2qscU.ZH/3OecF1Lbqn/4NA121rwkUrpMv7IWzKeO2",
-      "displayName": "amarans"
-    },
-    {
-      "id": "O1eeYmxzt",
-      "email": "amarans@gmail.com",
-      "password": "$2b$10$DaFEqObjz1w6RPaHVTSdYexDFtPaPV6edkN10saX8zAvO9CBLGBi6",
-      "displayName": "amarans"
-    },
-    {
-      "id": "c51ilw5LJ",
-      "email": "amarans@gmail.com",
-      "password": "$2b$10$VwbKe3VDiUFaqj5.sZ52xuIUnS2ehIm0Ka2KbMHconk14eaE5SEMO",
-      "displayName": "amarans1"
-    },
-    {
-      "id": "SnTFDVTLx",
-      "email": "amarans@gmail.com",
-      "password": "$2b$10$yJQbRsf5ryHptXiayLqYaOdIImWvX4gnL3qmmxvkFL6JjQKDlj8yG",
-      "displayName": "amarnas"
-    },
-    {
-      "id": "jXyH-aFJl",
-      "email": "gwgw3@gmail.com",
-      "password": "$2b$10$2vTBka/WJeIRR4NmWp2O7.lSRKfXuqw7rFi/WNN4MRuLbsaxk/P9K",
-      "displayName": "gwgw3"
+      "id": "WXVvQWBV5",
+      "email": "gwgw4578@gmail.com",
+      "displayName": "gwgw4578",
+      "facebookId": "619802142033167",
+      "password": "$2b$10$5YT4K4o02etOJ9aTYCqoduCt4GKdom/M2/ALsQ9P0SyYBsUJfcI7e"
     }
   ],
   "topics": [
     {
-      "id": "_AhzXQNvR",
+      "id": "i_AVlBw2P",
       "title": "CSS3",
-      "description": "321321321",
-      "user_id": "DE5m85AyM"
-    },
-    {
-      "id": "_2u7iHYmb",
-      "title": "CSS",
-      "description": "csscss",
-      "user_id": "DE5m85AyM"
-    },
-    {
-      "id": "OLJNtA9uc",
-      "title": "CSS3321",
-      "description": "321",
-      "user_id": "anzXukhCt"
-    },
-    {
-      "id": "504eGYeBy",
-      "title": "amrans1",
-      "description": "1",
-      "user_id": "c51ilw5LJ"
-    },
-    {
-      "id": "_M3dV2atp",
-      "title": "amarans",
-      "description": "amarans",
-      "user_id": "SnTFDVTLx"
-    },
-    {
-      "id": "SzbhENQz6",
-      "title": "gwgw3",
-      "description": "gwgw3zz",
-      "user_id": "jXyH-aFJl"
-    },
-    {
-      "id": "5U6A4Y3m_",
-      "title": "sorialgi",
-      "description": "332",
-      "user_id": "Zm_J6vMOb"
+      "description": "111123",
+      "user_id": "WXVvQWBV5"
     }
   ]
 }
